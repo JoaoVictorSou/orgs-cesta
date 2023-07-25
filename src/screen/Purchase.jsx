@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
 
 import top from '../../assets/topo.png'
+import seller_logo from '../../assets/logo.png'
 
 const width = Dimensions.get('screen').width
 
@@ -13,7 +14,10 @@ let Purchase = () => {
 
             <View style = {styles.purchase}>
                 <Text style = {styles.purchase_name}>Cesta de Verduras</Text>
-                <Text style = {styles.seller_name}>Jenny Jack Farm</Text>
+                <View style = {styles.seller_logo_area}>
+                    <Image source = {seller_logo} style = {styles.seller_logo} />
+                    <Text style = {styles.seller_name}>Jenny Jack Farm</Text>
+                </View>
                 <Text style = {styles.description}>
                     Uma cesta com produtos selecionados
                     cuidadosamente da fazenda direto para
@@ -50,9 +54,18 @@ const styles = StyleSheet.create({
         color: '#464646',
         fontWeight: 'bold'
     },
+    seller_logo_area: {
+        flexDirection: 'row',
+        paddingVertical: width/40
+    },
+    seller_logo: {
+        width: 32,
+        height: 32
+    },
     seller_name: {
         fontSize: width/25,
-        lineHeight: width/15
+        lineHeight: width/15,
+        marginLeft: width/40
     },
     description: {
         color: '#A3A3A3',
