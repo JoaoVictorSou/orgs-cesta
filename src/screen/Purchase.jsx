@@ -13,12 +13,13 @@ let Purchase = () => {
 
             <View style = {styles.purchase}>
                 <Text style = {styles.purchase_name}>Cesta de Verduras</Text>
-                <Text>Jenny Jack Farm</Text>
-                <Text>
+                <Text style = {styles.seller_name}>Jenny Jack Farm</Text>
+                <Text style = {styles.description}>
                     Uma cesta com produtos selecionados
                     cuidadosamente da fazenda direto para
                     sua cozinha.
                 </Text>
+                <Text style = {styles.price}>R$ 40,00</Text>
             </View>
         </>
     )
@@ -48,6 +49,23 @@ const styles = StyleSheet.create({
         lineHeight: width/8,
         color: '#464646',
         fontWeight: 'bold'
+    },
+    seller_name: {
+        fontSize: width/25,
+        lineHeight: width/15
+    },
+    description: {
+        color: '#A3A3A3',
+        fontSize: width/25,
+        lineHeight: width/15
+    },
+    price: {
+        color: '#2A9F85',
+        fontWeight: 'bold',
+        fontSize: width/15,
+        lineHeight: width/8,
+        marginTop: width/40
+
     }
 })
 
