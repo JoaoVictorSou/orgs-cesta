@@ -1,6 +1,8 @@
 import React from 'react'
 import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
 
+import TextPurchase from '../componet/TextPurchase'
+
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
 
 import top from '../../assets/topo.png'
@@ -26,11 +28,11 @@ let Purchase = () => {
                         <Image source = {seller_logo} style = {styles.seller_logo} />
                         <Text style = {styles.seller_name}>Jenny Jack Farm</Text>
                     </View>
-                    <Text style = {styles.description}>
+                    <TextPurchase style = {styles.description}>
                         Uma cesta com produtos selecionados
                         cuidadosamente da fazenda direto para
                         sua cozinha.
-                    </Text>
+                    </TextPurchase>
                     <Text style = {styles.price}>R$ 40,00</Text>
                 </View>
             </>
