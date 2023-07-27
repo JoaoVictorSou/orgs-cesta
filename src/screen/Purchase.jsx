@@ -20,20 +20,20 @@ let Purchase = () => {
         return (
             <> 
                 <Image source = {top} style = {styles.top} />
-                <Text style = {styles.title}>Detalhes da cesta</Text>
+                <TextPurchase style = {styles.title}>Detalhes da cesta</TextPurchase>
 
                 <View style = {styles.purchase}>
-                    <Text style = {styles.purchase_name}>Cesta de Verduras</Text>
+                    <TextPurchase style = {styles.purchase_name}>Cesta de Verduras</TextPurchase>
                     <View style = {styles.seller_logo_area}>
                         <Image source = {seller_logo} style = {styles.seller_logo} />
-                        <Text style = {styles.seller_name}>Jenny Jack Farm</Text>
+                        <TextPurchase style = {styles.seller_name}>Jenny Jack Farm</TextPurchase>
                     </View>
                     <TextPurchase style = {styles.description}>
                         Uma cesta com produtos selecionados
                         cuidadosamente da fazenda direto para
                         sua cozinha.
                     </TextPurchase>
-                    <Text style = {styles.price}>R$ 40,00</Text>
+                    <TextPurchase style = {styles.price}>R$ 40,00</TextPurchase>
                 </View>
             </>
         )
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         fontSize: width/15,
         lineHeight: width/8,
         color: '#464646',
-        fontFamily: 'MontserratBold'
+        fontWeight: 'bold'
     },
     seller_logo_area: {
         flexDirection: 'row',
