@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
 
-import TextPurchase from '../componet/TextPurchase'
+import TextPurchase from '../../componet/TextPurchase'
 
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
 
-import top from '../../assets/topo.png'
-import seller_logo from '../../assets/logo.png'
+import top from '../../../assets/topo.png'
+import seller_logo from '../../../assets/logo.png'
 
 const width = Dimensions.get('screen').width
 
