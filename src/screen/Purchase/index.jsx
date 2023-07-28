@@ -1,11 +1,11 @@
 import React from 'react'
-import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
+import { Image, StyleSheet, Dimensions, View } from 'react-native'
+import Top from './component/Top'
 
 import TextPurchase from '../../componet/TextPurchase'
 
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
 
-import top from '../../../assets/topo.png'
 import seller_logo from '../../../assets/logo.png'
 
 const width = Dimensions.get('screen').width
@@ -19,8 +19,7 @@ let Purchase = () => {
     if (fontsLoaded) {
         return (
             <> 
-                <Image source = {top} style = {styles.top} />
-                <TextPurchase style = {styles.title}>Detalhes da cesta</TextPurchase>
+                <Top />
 
                 <View style = {styles.purchase}>
                     <TextPurchase style = {styles.purchase_name}>Cesta de Verduras</TextPurchase>
@@ -41,20 +40,6 @@ let Purchase = () => {
 }
 
 const styles = StyleSheet.create({
-    top: {
-        width: "100%",
-        height: (578/768) * width
-    },
-    title: {
-        fontSize: width/20,
-        width: '100%',
-        position: 'absolute',
-        textAlign: 'center',
-        lineHeight: width/20,
-        color: 'white',
-        fontWeight: 'bold',
-        padding: width/15
-    },
     purchase: {
         paddingVertical: width/40,
         paddingHorizontal: width/25
