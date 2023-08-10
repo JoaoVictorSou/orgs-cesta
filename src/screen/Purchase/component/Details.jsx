@@ -1,24 +1,21 @@
 import { View, Image, StyleSheet, Dimensions } from "react-native"
 import TextPurchase from "../../../componet/TextPurchase"
-
-import seller_logo from '../..//../../assets/logo.png'
+import purchase from "../../../mocks/purchase"
 
 const width = Dimensions.get('screen').width
 
 const Details = (props) => {
     return (
         <>
-            <TextPurchase style = {styles.purchase_name}>Cesta de Verduras</TextPurchase>
+            <TextPurchase style = {styles.purchase_name}>{purchase.details.name}</TextPurchase>
             <View style = {styles.seller_logo_area}>
-                <Image source = {seller_logo} style = {styles.seller_logo} />
-                <TextPurchase style = {styles.seller_name}>Jenny Jack Farm</TextPurchase>
+                <Image source = {purchase.seller_logo} style = {styles.seller_logo} />
+                <TextPurchase style = {styles.seller_name}>{purchase.details.seller_name}</TextPurchase>
             </View>
             <TextPurchase style = {styles.description}>
-                Uma cesta com produtos selecionados
-                cuidadosamente da fazenda direto para
-                sua cozinha.
+                {purchase.details.description}
             </TextPurchase>
-            <TextPurchase style = {styles.price}>R$ 40,00</TextPurchase>
+            <TextPurchase style = {styles.price}>R$ {purchase.details.price}</TextPurchase>
         </>
     )
 }
