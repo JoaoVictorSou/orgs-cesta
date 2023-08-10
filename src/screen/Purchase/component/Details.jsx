@@ -1,21 +1,20 @@
 import { View, Image, StyleSheet, Dimensions } from "react-native"
 import TextPurchase from "../../../componet/TextPurchase"
-import purchase from "../../../mocks/purchase"
 
 const width = Dimensions.get('screen').width
 
-const Details = (props) => {
+const Details = ({name, logo, seller_name, description, price}) => {
     return (
         <>
-            <TextPurchase style = {styles.purchase_name}>{purchase.details.name}</TextPurchase>
+            <TextPurchase style = {styles.purchase_name}>{name}</TextPurchase>
             <View style = {styles.seller_logo_area}>
-                <Image source = {purchase.seller_logo} style = {styles.seller_logo} />
-                <TextPurchase style = {styles.seller_name}>{purchase.details.seller_name}</TextPurchase>
+                <Image source = {logo} style = {styles.seller_logo} />
+                <TextPurchase style = {styles.seller_name}>{seller_name}</TextPurchase>
             </View>
             <TextPurchase style = {styles.description}>
-                {purchase.details.description}
+                {description}
             </TextPurchase>
-            <TextPurchase style = {styles.price}>R$ {purchase.details.price}</TextPurchase>
+            <TextPurchase style = {styles.price}>R$ {price}</TextPurchase>
         </>
     )
 }

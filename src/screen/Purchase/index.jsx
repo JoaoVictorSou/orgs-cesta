@@ -7,7 +7,7 @@ import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-googl
 
 const width = Dimensions.get('screen').width
 
-const Purchase = () => {
+const Purchase = ({top, details}) => {
     let [ fontsLoaded ] = useFonts({
         "MontserratRegular": Montserrat_400Regular,
         "MontserratBold": Montserrat_700Bold
@@ -16,9 +16,9 @@ const Purchase = () => {
     if (fontsLoaded) {
         return (
             <> 
-                <Top />
+                <Top {...top} />
                 <View style = {styles.purchase}>
-                    <Details />
+                    <Details {...details} />
                 </View>
             </>
         )
